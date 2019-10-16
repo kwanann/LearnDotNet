@@ -8,8 +8,11 @@ All content will reference the AdventureWorks Database found over at https://git
 Starting with simple console applications, learn and explore Linq
 
 https://ef.readthedocs.io/en/staging/platforms/full-dotnet/existing-db.html
+
 https://www.tutorialsteacher.com/linq/sample-linq-queries
+
 https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
+
 
 ## Week 2 ##
 Integrating a DB backend using Linq to a front-end
