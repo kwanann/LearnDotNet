@@ -13,8 +13,6 @@ https://www.tutorialsteacher.com/linq/sample-linq-queries
 
 https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
 
-
-## Week 2 ##
 Integrating a DB backend using Linq to a front-end
 After importing AdventureWorks DB into a local instance of SQL Server
 
@@ -26,7 +24,7 @@ After importing AdventureWorks DB into a local instance of SQL Server
 6. Read user input from console and then use it to filter the email field, i.e at this point you will be filtering based on 2 inputs, one for middlename and another for emailaddress
 7. Change from listing the firstnames to listing the entire people record. To simplify, list it in JSON format
 
-## Week 3 ##
+## Week 2 ##
 1. Finish up last week HW (aka output in JSON), plagiarism is allowed, but i want all of you to understand what is the cause. The feature that cause this problem is both good and bad for you
 2. Time to learn about the System.IO namespace. Continue to use the console app and do this
 3. Download https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/adventure-works/oltp-install-script/CurrencyRate.csv
@@ -36,3 +34,15 @@ After importing AdventureWorks DB into a local instance of SQL Server
 7. Read user input and filter by DestinationCurrency
 8. Group by DestinationCurrency and then display the average, low and highest exchange rate in the data set
 9. PLOT USD-CAD exchange rate over time i.e X is Time, Y is exchange rate
+
+## Week 3 ##
+CRUD operations
+
+## Week 4 ##
+Bringing it all together
+
+## Week 5-8 ##
+Winform
+
+## Week 9-12 ##
+Webform
