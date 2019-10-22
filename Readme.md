@@ -28,12 +28,11 @@ After importing AdventureWorks DB into a local instance of SQL Server
 
 ## Week 3 ##
 1. Finish up last week HW (aka output in JSON), plagiarism is allowed, but i want all of you to understand what is the cause. The feature that cause this problem is both good and bad for you
-
 2. Time to learn about the System.IO namespace. Continue to use the console app and do this
-2.1 Download https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/adventure-works/oltp-install-script/CurrencyRate.csv
-2.2 Read the file via your console app and display it as is line by line
-2.3 Cast each line to a class and store it in a list e.g List<CurrencyRate>
-2.4 Print SourceCurrency, DestinationCurrency, Conversation rate
-2.5 Read user input and filter by DestinationCurrency
-2.6 Group by DestinationCurrency and then display the average, low and highest exchange rate in the data set
-2.7 PLOT USD-CAD exchange rate over time i.e X is Time, Y is exchange rate
+3. Download https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/adventure-works/oltp-install-script/CurrencyRate.csv
+4. Read the file via your console app and display it as is line by line
+5. Cast each line to a class and store it in a list e.g List<CurrencyRate>
+6. Print SourceCurrency, DestinationCurrency, Conversation rate
+7. Read user input and filter by DestinationCurrency
+8. Group by DestinationCurrency and then display the average, low and highest exchange rate in the data set
+9. PLOT USD-CAD exchange rate over time i.e X is Time, Y is exchange rate
