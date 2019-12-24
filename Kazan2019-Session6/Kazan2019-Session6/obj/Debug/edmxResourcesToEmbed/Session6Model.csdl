@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Session6Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetSN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssetName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DepartmentLocationID" Type="Int64" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int64" Nullable="false" />
+    <Property Name="AssetGroupID" Type="Int64" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WarrantyDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="DepartmentLocation" Relationship="Self.FK_Assets_DepartmentLocations" FromRole="Assets" ToRole="DepartmentLocations" />
+    <NavigationProperty Name="EmergencyMaintenances" Relationship="Self.FK_EmergencyMaintenances_Assets" FromRole="Assets" ToRole="EmergencyMaintenances" />
+  </EntityType>
+  <EntityType Name="DepartmentLocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int64" Nullable="false" />
+    <Property Name="LocationID" Type="Int64" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Assets" Relationship="Self.FK_Assets_DepartmentLocations" FromRole="DepartmentLocations" ToRole="Assets" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_DepartmentLocations_Departments" FromRole="DepartmentLocations" ToRole="Departments" />
+    <NavigationProperty Name="Location" Relationship="Self.FK_DepartmentLocations_Locations" FromRole="DepartmentLocations" ToRole="Locations" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="DepartmentLocations" Relationship="Self.FK_DepartmentLocations_Departments" FromRole="Departments" ToRole="DepartmentLocations" />
+  </EntityType>
+  <EntityType Name="EmergencyMaintenance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetID" Type="Int64" Nullable="false" />
+    <Property Name="PriorityID" Type="Int64" Nullable="false" />
+    <Property Name="DescriptionEmergency" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OtherConsiderations" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EMRequestDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EMStartDate" Type="DateTime" Precision="0" />
+    <Property Name="EMEndDate" Type="DateTime" Precision="0" />
+    <Property Name="EMTechnicianNote" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Asset" Relationship="Self.FK_EmergencyMaintenances_Assets" FromRole="EmergencyMaintenances" ToRole="Assets" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Headers_EmergencyMaintenances" FromRole="EmergencyMaintenances" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="DepartmentLocations" Relationship="Self.FK_DepartmentLocations_Locations" FromRole="Locations" ToRole="DepartmentLocations" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int64" Nullable="false" />
+    <Property Name="PartID" Type="Int64" Nullable="false" />
+    <Property Name="BatchNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Stock" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_OrderItems_Orders" FromRole="OrderItems" ToRole="Orders" />
+    <NavigationProperty Name="Part" Relationship="Self.FK_Transactions_Parts" FromRole="OrderItems" ToRole="Parts" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionTypeID" Type="Int64" Nullable="false" />
+    <Property Name="SupplierID" Type="Int64" />
+    <Property Name="EmergencyMaintenancesID" Type="Int64" />
+    <Property Name="SourceWarehouseID" Type="Int64" />
+    <Property Name="DestinationWarehouseID" Type="Int64" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <NavigationProperty Name="EmergencyMaintenance" Relationship="Self.FK_Headers_EmergencyMaintenances" FromRole="Orders" ToRole="EmergencyMaintenances" />
+    <NavigationProperty Name="OrderItems" Relationship="Self.FK_OrderItems_Orders" FromRole="Orders" ToRole="OrderItems" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK_Headers_Stocks" FromRole="Orders" ToRole="Warehouses" />
+    <NavigationProperty Name="Warehouse1" Relationship="Self.FK_Headers_Stocks1" FromRole="Orders" ToRole="Warehouses" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Headers_Suppliers" FromRole="Orders" ToRole="Suppliers" />
+    <NavigationProperty Name="TransactionType" Relationship="Self.FK_Headers_TransactionTypes" FromRole="Orders" ToRole="TransactionTypes" />
+  </EntityType>
+  <EntityType Name="Part">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EffectiveLife" Type="Int64" />
+    <Property Name="BatchNumberHasRequired" Type="Boolean" />
+    <Property Name="MinimumQuantity" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="OrderItems" Relationship="Self.FK_Transactions_Parts" FromRole="Parts" ToRole="OrderItems" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Headers_Suppliers" FromRole="Suppliers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Headers_TransactionTypes" FromRole="TransactionTypes" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Headers_Stocks" FromRole="Warehouses" ToRole="Orders" />
+    <NavigationProperty Name="Orders1" Relationship="Self.FK_Headers_Stocks1" FromRole="Warehouses" ToRole="Orders" />
+  </EntityType>
+  <Association Name="FK_Assets_DepartmentLocations">
+    <End Role="DepartmentLocations" Type="Self.DepartmentLocation" Multiplicity="1" />
+    <End Role="Assets" Type="Self.Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentLocations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="DepartmentLocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmergencyMaintenances_Assets">
+    <End Role="Assets" Type="Self.Asset" Multiplicity="1" />
+    <End Role="EmergencyMaintenances" Type="Self.EmergencyMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assets">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EmergencyMaintenances">
+        <PropertyRef Name="AssetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentLocations_Departments">
+    <End Role="Departments" Type="Self.Department" Multiplicity="1" />
+    <End Role="DepartmentLocations" Type="Self.DepartmentLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentLocations">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentLocations_Locations">
+    <End Role="Locations" Type="Self.Location" Multiplicity="1" />
+    <End Role="DepartmentLocations" Type="Self.DepartmentLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentLocations">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_EmergencyMaintenances">
+    <End Role="EmergencyMaintenances" Type="Self.EmergencyMaintenance" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmergencyMaintenances">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="EmergencyMaintenancesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItems_Orders">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_Parts">
+    <End Role="Parts" Type="Self.Part" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="PartID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_Stocks">
+    <End Role="Warehouses" Type="Self.Warehouse" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouses">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="SourceWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_Stocks1">
+    <End Role="Warehouses" Type="Self.Warehouse" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouses">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="DestinationWarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Headers_TransactionTypes">
+    <End Role="TransactionTypes" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="TransactionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Session6Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assets" EntityType="Self.Asset" />
+    <EntitySet Name="DepartmentLocations" EntityType="Self.DepartmentLocation" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="EmergencyMaintenances" EntityType="Self.EmergencyMaintenance" />
+    <EntitySet Name="Locations" EntityType="Self.Location" />
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItem" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Parts" EntityType="Self.Part" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="TransactionTypes" EntityType="Self.TransactionType" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouse" />
+    <AssociationSet Name="FK_Assets_DepartmentLocations" Association="Self.FK_Assets_DepartmentLocations">
+      <End Role="DepartmentLocations" EntitySet="DepartmentLocations" />
+      <End Role="Assets" EntitySet="Assets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmergencyMaintenances_Assets" Association="Self.FK_EmergencyMaintenances_Assets">
+      <End Role="Assets" EntitySet="Assets" />
+      <End Role="EmergencyMaintenances" EntitySet="EmergencyMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentLocations_Departments" Association="Self.FK_DepartmentLocations_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="DepartmentLocations" EntitySet="DepartmentLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentLocations_Locations" Association="Self.FK_DepartmentLocations_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="DepartmentLocations" EntitySet="DepartmentLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_EmergencyMaintenances" Association="Self.FK_Headers_EmergencyMaintenances">
+      <End Role="EmergencyMaintenances" EntitySet="EmergencyMaintenances" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItems_Orders" Association="Self.FK_OrderItems_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_Parts" Association="Self.FK_Transactions_Parts">
+      <End Role="Parts" EntitySet="Parts" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_Stocks" Association="Self.FK_Headers_Stocks">
+      <End Role="Warehouses" EntitySet="Warehouses" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_Stocks1" Association="Self.FK_Headers_Stocks1">
+      <End Role="Warehouses" EntitySet="Warehouses" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_Suppliers" Association="Self.FK_Headers_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Headers_TransactionTypes" Association="Self.FK_Headers_TransactionTypes">
+      <End Role="TransactionTypes" EntitySet="TransactionTypes" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

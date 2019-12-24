@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<KazanNeftSoftware>
+    <Native-Langue name="Chinese" filename="Chinese.xml" version="1.3">
+      <InventoryDashboard>
+        <FormTitle name="中文Invenroty Dashboard"/>
+        <PanelTitle name="EMSpendingByDepartment" value="中文EM Spending ByDepartment"/>
+        <PanelTitle name="MonthlyReportMostUsedParts" value="中文Monthly Report for Most-Used Parts"/>
+        <PanelTitle name="MonthlyReportCostlyAssets" value="中文Monthly Report of Costly Assets"/>
+        <PanelTitle name="DepartmentSpendingRatio" value="中文Department Spending Ratio"/>
+        <PanelTitle name="MonthlyDepartmentSpending" value="中文Monthly Department Spending"/>
+
+        <Button name="InventoryControl" value="中文Inventory Control" />
+        <Label name="lang" value="中文Lan"/>
+      </InventoryDashboard>
+    </Native-Langue>
+</KazanNeftSoftware>

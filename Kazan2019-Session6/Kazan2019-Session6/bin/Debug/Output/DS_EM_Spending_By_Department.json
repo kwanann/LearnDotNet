@@ -1,0 +1,374 @@
+[
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-09-29T00:00:00",
+    "Spending": 1000.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-01-05T00:00:00",
+    "Spending": 16380.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2017-01-25T00:00:00",
+    "Spending": 15600.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-02-14T00:00:00",
+    "Spending": 174.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-03-06T00:00:00",
+    "Spending": 650.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-03-26T00:00:00",
+    "Spending": 23732.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-04-15T00:00:00",
+    "Spending": null
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-05-05T00:00:00",
+    "Spending": 2424.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-05-25T00:00:00",
+    "Spending": 27120.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-06-14T00:00:00",
+    "Spending": 27832.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-07-04T00:00:00",
+    "Spending": 308.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-07-24T00:00:00",
+    "Spending": 7782.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-08-13T00:00:00",
+    "Spending": 1196.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-09-02T00:00:00",
+    "Spending": 40358.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2017-09-22T00:00:00",
+    "Spending": 16778.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-12-12T00:00:00",
+    "Spending": 17158.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-01T00:00:00",
+    "Spending": 14236.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-21T00:00:00",
+    "Spending": 1620.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-11T00:00:00",
+    "Spending": null
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-12-31T00:00:00",
+    "Spending": 4106.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2018-01-20T00:00:00",
+    "Spending": 3624.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2018-02-09T00:00:00",
+    "Spending": 31010.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-03-01T00:00:00",
+    "Spending": 662.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2018-03-21T00:00:00",
+    "Spending": 1256.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-04-10T00:00:00",
+    "Spending": 27770.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-04-30T00:00:00",
+    "Spending": 2442.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-05-20T00:00:00",
+    "Spending": 3490.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2018-06-09T00:00:00",
+    "Spending": 29988.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-06-29T00:00:00",
+    "Spending": 29010.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-01-05T00:00:00",
+    "Spending": 3910.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-01-25T00:00:00",
+    "Spending": 16306.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2017-02-14T00:00:00",
+    "Spending": 3538.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-03-06T00:00:00",
+    "Spending": 6986.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-03-26T00:00:00",
+    "Spending": 3734.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-04-15T00:00:00",
+    "Spending": 3218.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-05-05T00:00:00",
+    "Spending": 41302.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2017-05-25T00:00:00",
+    "Spending": 2212.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-06-14T00:00:00",
+    "Spending": 970.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-07-04T00:00:00",
+    "Spending": 3000.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-07-24T00:00:00",
+    "Spending": 14042.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-08-13T00:00:00",
+    "Spending": 4274.000000
+  },
+  {
+    "DeptName": "R&D",
+    "DeptID": 4,
+    "theDate": "2017-09-02T00:00:00",
+    "Spending": 26462.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-09-22T00:00:00",
+    "Spending": 13890.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-12T00:00:00",
+    "Spending": 16236.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-01T00:00:00",
+    "Spending": 1768.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-21T00:00:00",
+    "Spending": 29022.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-11T00:00:00",
+    "Spending": 17242.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-12-31T00:00:00",
+    "Spending": 15390.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-01-20T00:00:00",
+    "Spending": 2272.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-02-09T00:00:00",
+    "Spending": 17110.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-03-01T00:00:00",
+    "Spending": 4802.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-03-21T00:00:00",
+    "Spending": 4786.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2018-04-10T00:00:00",
+    "Spending": 1998.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-04-30T00:00:00",
+    "Spending": 9406.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-05-20T00:00:00",
+    "Spending": null
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2018-06-09T00:00:00",
+    "Spending": 28698.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2018-06-29T00:00:00",
+    "Spending": 14658.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-08-13T00:00:00",
+    "Spending": 13242.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-08-14T00:00:00",
+    "Spending": 16252.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-08-15T00:00:00",
+    "Spending": 8528.000000
+  },
+  {
+    "DeptName": "Exploration",
+    "DeptID": 1,
+    "theDate": "2017-08-16T00:00:00",
+    "Spending": 6168.000000
+  },
+  {
+    "DeptName": "Distribution",
+    "DeptID": 5,
+    "theDate": "2017-08-17T00:00:00",
+    "Spending": 3778.000000
+  }
+]

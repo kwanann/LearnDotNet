@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="06b5880769d54508ade2ac2f0c7c002e" Name="Diagram1">
+        <EntityTypeShape EntityType="Session6Model.Asset" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.DepartmentLocation" Width="1.5" PointX="1.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Department" Width="1.5" PointX="1.5" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.EmergencyMaintenance" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Location" Width="1.5" PointX="1.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.OrderItem" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Order" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Part" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.TransactionType" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session6Model.Warehouse" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="Session6Model.FK_Assets_DepartmentLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_EmergencyMaintenances_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_DepartmentLocations_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_DepartmentLocations_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Headers_EmergencyMaintenances" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_OrderItems_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Transactions_Parts" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Headers_Stocks" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Headers_Stocks1" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Headers_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="Session6Model.FK_Headers_TransactionTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
