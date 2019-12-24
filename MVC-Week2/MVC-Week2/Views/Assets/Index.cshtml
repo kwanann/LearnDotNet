@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVC_Week2.Models.Asset>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetSN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WarrantyDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetGroup.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentLocation.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetSN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WarrantyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetGroup.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentLocation.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

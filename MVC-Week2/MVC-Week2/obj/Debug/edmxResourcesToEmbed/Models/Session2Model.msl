@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Session2ModelStoreContainer" CdmEntityContainer="Session2Entities">
+    <EntitySetMapping Name="AssetGroups">
+      <EntityTypeMapping TypeName="Session2Model.AssetGroup">
+        <MappingFragment StoreEntitySet="AssetGroups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="Session2Model.Asset">
+        <MappingFragment StoreEntitySet="Assets">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetSN" ColumnName="AssetSN" />
+          <ScalarProperty Name="AssetName" ColumnName="AssetName" />
+          <ScalarProperty Name="DepartmentLocationID" ColumnName="DepartmentLocationID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="AssetGroupID" ColumnName="AssetGroupID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WarrantyDate" ColumnName="WarrantyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChangedParts">
+      <EntityTypeMapping TypeName="Session2Model.ChangedPart">
+        <MappingFragment StoreEntitySet="ChangedParts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmergencyMaintenanceID" ColumnName="EmergencyMaintenanceID" />
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmentLocations">
+      <EntityTypeMapping TypeName="Session2Model.DepartmentLocation">
+        <MappingFragment StoreEntitySet="DepartmentLocations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="Session2Model.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmergencyMaintenances">
+      <EntityTypeMapping TypeName="Session2Model.EmergencyMaintenance">
+        <MappingFragment StoreEntitySet="EmergencyMaintenances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="DescriptionEmergency" ColumnName="DescriptionEmergency" />
+          <ScalarProperty Name="OtherConsiderations" ColumnName="OtherConsiderations" />
+          <ScalarProperty Name="EMReportDate" ColumnName="EMReportDate" />
+          <ScalarProperty Name="EMStartDate" ColumnName="EMStartDate" />
+          <ScalarProperty Name="EMEndDate" ColumnName="EMEndDate" />
+          <ScalarProperty Name="EMTechnicianNote" ColumnName="EMTechnicianNote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="Session2Model.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="Session2Model.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parts">
+      <EntityTypeMapping TypeName="Session2Model.Part">
+        <MappingFragment StoreEntitySet="Parts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EffectiveLife" ColumnName="EffectiveLife" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Priorities">
+      <EntityTypeMapping TypeName="Session2Model.Priority">
+        <MappingFragment StoreEntitySet="Priorities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
